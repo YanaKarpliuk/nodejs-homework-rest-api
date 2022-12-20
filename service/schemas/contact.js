@@ -17,6 +17,10 @@ const contact = new Schema(
       type: String,
       minlength: 10,
       maxlength: 15
+    },
+    isFavourite: {
+      type: Boolean,
+      default: false
     }
   },
   { versionKey: false, timestamps: true }
