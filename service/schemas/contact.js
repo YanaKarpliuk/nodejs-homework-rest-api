@@ -6,22 +6,26 @@ const contact = new Schema(
     name: {
       type: String,
       minlength: 2,
-      maxlength: 70
+      maxlength: 70,
     },
     email: {
       type: String,
       minlength: 3,
-      maxlength: 70
+      maxlength: 70,
     },
     phone: {
       type: String,
       minlength: 10,
-      maxlength: 15
+      maxlength: 15,
     },
     isFavourite: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
+    owner: {
+      type: SchemaTypes.ObjectId,
+      ref: "user",
+    },
   },
   { versionKey: false, timestamps: true }
 );

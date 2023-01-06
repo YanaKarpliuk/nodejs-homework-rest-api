@@ -29,6 +29,7 @@ module.exports = {
           /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/
         )
         .required(),
+      
     });
 
     const validationResult = schema.validate(request.body);
